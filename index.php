@@ -2,7 +2,7 @@
 require 'application/lib/Dev.php';
 use application\core\Router;
 
-//spl_autoload_register() - функція, яка  
+//spl_autoload_register() - функція, яка  спрацьовує перед тим як викинути помилку що клас не підключений(тобто ми хочемо використати клас який не підключений і перед виводом помилки завжди відбувається виклик цієї функції)
 spl_autoload_register(function ($class) {
     //str_replace() - функція, яка замінює рядки на інші(зворотню скисну риску на звичайний слеш)
     $path = str_replace('\\', '/', $class. '.php');
